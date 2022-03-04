@@ -11,7 +11,7 @@ class Api extends React.Component {
   }
 
   componentDidMount() {
-    fetch('https://gbfs.citibikenyc.com/gbfs/en/station_information.json', { mode: 'no-cors' })
+    fetch('https://gbfs.citibikenyc.com/gbfs/en/station_infordsadsadmation.json', { mode: 'no-cors' })
       .then(
         (res) => res.json(),
       )
@@ -32,9 +32,6 @@ class Api extends React.Component {
           })
         },
       )
-      .then((data) => {
-        resolve(data ? JSON.parse(data) : {})
-      })
   }
 
   render() {
@@ -51,7 +48,7 @@ class Api extends React.Component {
       return <div>Loading...</div>
     }
     return (
-      <div>Loading...</div>
+      <div>{items}</div>
 
     )
   }
